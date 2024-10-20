@@ -3,135 +3,188 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Greys - Resume</title>
+    <title>Resume - Mary Grace Degamo</title>
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f8f8f8;
+            font-family: system-ui, sans-serif;
+            background-color: #f4f4f4;
             color: #333;
+            margin: 0;
+            padding: 20px;
         }
 
         .container {
-            display: flex;
             max-width: 800px;
-            margin: 50px auto;
+            margin: 0 auto;
             background-color: #fff;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 8px;
         }
 
-        .left-column {
+        /* Header section with image on the left and name/details on the right */
+        .header {
+            display: flex;
+            align-items: center;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #ccc;
+        }
+
+        .header img {
+            border-radius: 8px;
+            width: 120px;
+            height: 120px;
+            margin-right: 20px;
+        }
+
+        .header div {
             flex: 1;
-            padding: 30px;
-            background-color: #f0f0f0;
-            color: #333;
         }
 
-        .right-column {
-            flex: 1;
-            padding: 30px;
-            background-color: #e0e0e0;
-        }
-
-        img {
-            border-radius: 50%;
-            width: 200px;
-            height: 200px;
-            border: 5px solid #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        h1 {
-            margin: 0;
+        .header h1 {
             font-size: 28px;
+            color: #444;
+            margin: 0;
+
+        }
+
+        
+
+        /* Contact Info aligned under name */
+        .contact-info {
+            margin-top: -2px;
+        }
+
+        .contact-info div {
+            display: flex;
+            align-items: center;
+            margin: 5px 0;
+        }
+
+        .contact-info div i {
+            font-size: 18px;
+            color: #444;
+            margin-right: 8px;
+        }
+
+        .contact-info a {
+           
+            text-decoration: underline;
+        }
+
+         .contact-info span {
+            color: #333;
+            text-decoration: none;
         }
 
         h2 {
+            font-size: 20px;
             color: #555;
-            border-bottom: 2px solid #555;
-            padding-bottom: 5px;
             margin-top: 20px;
+            margin-bottom: 10px;
         }
 
         p {
-            margin: 10px 0;
-            line-height: 1.6;
+            font-size: 16px;
+            margin: 5px 0;
+            color: #555;
         }
 
-        ul {
+        /* Skills and Projects in full-width sections */
+        .section {
+            padding: 20px 0;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        .skills ul, .projects ul {
             list-style-type: none;
             padding: 0;
         }
 
-        li::before {
-            content: "\2022";
-            color: #555;
-            display: inline-block;
-            width: 1em;
-            margin-left: -1em;
+        .skills ul li, .projects ul li {
+            margin-bottom: 8px;
         }
 
-        .highlight {
-            color: #333;
-            font-weight: bold;
+        .skills ul li::before, .projects ul li::before {
+            content: "•";
+            color: #666;
+            margin-right: 10px;
         }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .header img {
+                margin-bottom: 10px;
+            }
+
+            h2 {
+                font-size: 18px;
+            }
+
+            p, li {
+                font-size: 14px;
+            }
+        }
+
+       
     </style>
 </head>
 <body>
 
     <div class="container">
-        <div class="left-column">
-            <img src="greys.png" >
-            <h1>Mary Grace Degamo</h1>
-            <p class="highlight">Bachelor of Science in Information Technology</p>
-    
-            <h2>Contact Information</h2>
-            <p>Email: marygracedegamo9704@example.com</p>
-            <p>Phone: 09620834341</p>
-    
+        <!-- Header -->
+        <div class="header">
+            <img src="greys.png" alt="Profile Picture">
+            <div>
+                <h1>Mary Grace Degamo</h1>
+               
+
+                <!-- Contact Info aligned with name and course -->
+                <div class="contact-info">
+                    <div>
+                        <i>&#9993;</i> <!-- Email icon -->
+                        <a class="email">marygracedegamo@gmail.com</a>
+                    </div>
+                    <div>
+                        <i>&#9742;</i> <!-- Phone icon -->
+                        <span>09620834341</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Education Section -->
+        <div class="section education">
             <h2>Education</h2>
             <p><strong>Bachelor of Science in Information Technology</strong></p>
             <p>Cordova Public College, Expected Graduation: 2026</p>
-    
-            <h2>Skills</h2>
-            <ul>
-                <li><strong>Programming Languages:</strong> C, C++, Java</li>
-                <li><strong>Web Development:</strong> Responsive design (e.g., Bootstrap)</li>
-                <li><strong>Operating Systems:</strong> Windows, Linux</li>
-                <li><strong>Soft Skills:</strong> Communication, Problem-solving, Time Management</li>
-            </ul>
-                <h2>References</h2>
-            <p>Available upon request</p>
-            
         </div>
 
-        <div class="right-column">
-           <h2>Projects</h2>
-            <p><strong>Web Development Project:</strong> Personal Portfolio Website</p>
-            <p>Developed and designed a personal portfolio website with a focus on responsive design using Bootstrap, showcasing technical skills and creativity.</p>
-    
-            <p><strong>Data Structures Project:</strong> GAMES (bingo)</p>
-            <p>Designed and implemented an interactive bingo game as part of a data structures project, demonstrating strong problem-solving and algorithmic thinking.</p>
-    
-            <h2>Extracurricular Activities</h2>
+        <!-- Skills Section -->
+        <div class="section skills">
+            <h2>Skills</h2>
             <ul>
-                <li><strong>IT DAYS:</strong> Actively participated in IT DAYS events, gaining exposure to emerging technologies and networking with industry professionals.</li>
-                <li><strong>Video Editing Competitions:</strong> Showcased creativity and technical skills by participating in video editing competitions.</li>
+                <li>Programming: C, C++, Java</li>
+                <li>Web Development: HTML, CSS, Bootstrap</li>
+                <li>Communication & Problem-Solving</li>
             </ul>
-    
-            <h2>Certifications</h2>
-            <p><strong>VIDEO EDITING Champion - IT DAYS, March 2023</strong></p>
-            <p>Achieved the title of VIDEO EDITING Champion at IT DAYS, showcasing proficiency and creativity in video editing.</p>
-    
-            <h2>Awards and Honors</h2>
-            <p><strong>Academic Excellence Award</strong></p>
-            <p>Recognized for outstanding academic performance, reflecting dedication and commitment to excellence in Information Technology studies.</p>
-    
+        </div>
+
+        <!-- Projects Section -->
+        <div class="section projects">
+            <h2>Projects</h2>
+            <ul>
+                <li><strong>Portfolio Website:</strong> Created a personal portfolio showcasing responsive design using Bootstrap.</li>
+                <li><strong>Bingo Game:</strong> Developed a bingo game project for data structures.</li>
+            </ul>
         </div>
     </div>
 
 </body>
 </html>
-
